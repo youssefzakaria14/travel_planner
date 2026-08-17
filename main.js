@@ -12,7 +12,7 @@ async function Destinations() {
 
             const card = document.createElement("div");
 
-            card.classList.add("col-lg-4","col-md-6", "col-sm-12");
+            card.classList.add("col-lg-4", "col-md-6", "col-sm-12");
 
             card.innerHTML = `
             
@@ -60,7 +60,7 @@ async function Destinations() {
 
             let card = document.createElement("div");
 
-            card.classList.add("col-lg-4","col-md-6", "col-sm-12");
+            card.classList.add("col-lg-4", "col-md-6", "col-sm-12");
 
             card.innerHTML = `
             
@@ -109,7 +109,7 @@ async function Destinations() {
 
             let card = document.createElement("div");
 
-            card.classList.add("col-lg-4","col-md-6", "col-sm-12");
+            card.classList.add("col-lg-4", "col-md-6", "col-sm-12");
 
             card.innerHTML = `
             
@@ -159,7 +159,7 @@ async function Destinations() {
 
             let card = document.createElement("div");
 
-            card.classList.add("col-lg-4","col-md-6", "col-sm-12");
+            card.classList.add("col-lg-4", "col-md-6", "col-sm-12");
 
             card.innerHTML = `
             
@@ -220,7 +220,7 @@ Destinations();
 
 document.getElementById("searchBtn").onclick = function () {
 
-    let search = document.getElementById("searchInput").value.toLowerCase();
+    let search = document.getElementById("searchInput").value.toLowerCase().trim();
 
     let cards = document.querySelectorAll(".card");
 
@@ -233,21 +233,21 @@ document.getElementById("searchBtn").onclick = function () {
             found = true;
         } else {
             card.parentElement.style.display = "none";
-            
+
         }
 
     });
 
     if (found == false) {
-        
+
         document.getElementById("error").innerHTML = "Destination not found";
-         
+
     } else {
         document.getElementById("error").innerHTML = "";
     }
 
-    document.querySelectorAll(".section-title").forEach(function(item){
-        item.style.display="none";
+    document.querySelectorAll(".section-title").forEach(function (item) {
+        item.style.display = "none";
     });
 
 };
