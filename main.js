@@ -282,3 +282,76 @@ document.getElementById("saveBtn").onclick = function () {
 };
 
 loadDestinations();
+
+
+
+document.getElementById("searchInput").oninput = function () {
+
+    let search = this.value.toLowerCase();
+
+    let cards = document.querySelectorAll(".card");
+
+    let error = document.getElementById("error");
+
+    let found = false;
+
+    let admin = document.querySelector(".admin-area");
+
+    let titles = document.querySelectorAll("h2");
+
+
+    if (search != "") {
+
+        admin.style.display = "none";
+
+        titles.forEach(title => {
+            title.style.display = "none";
+        });
+
+    } else {
+
+        admin.style.display = "";
+
+        titles.forEach(title => {
+            title.style.display = "";
+        });
+    }
+
+
+    cards.forEach(card => {
+
+        if (card.innerText.toLowerCase().includes(search)) {
+
+            card.parentElement.style.display = "";
+
+            found = true;
+
+        } else {
+
+            card.parentElement.style.display = "none";
+        }
+
+    });
+
+
+    if (!found && search != "") {
+
+        error.innerText = "Destination not found";
+
+        titles.forEach(title => {
+            title.style.display = "none";
+        });
+
+    } else {
+
+        error.innerText = "";
+
+        if (search == "") {
+
+            titles.forEach(title => {
+                title.style.display = "";
+            });
+        }
+    }
+
+};
