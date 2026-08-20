@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destination Details</title>
+    <link rel="stylesheet" href="details.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <div class="hero" id="hero">
+        <div class="heroContent">
+            <span><i class="bi bi-geo-alt-fill"></i> <span id="country"></span></span>
+            <h1 id="name"></h1>
+        </div>
+    </div>
+    <div class="detailsContainer">
+        <div class="info">
+            <div>
+                <i class="bi bi-star-fill"></i>
+                <span id="rating"></span>
+                <small>Rating</small>
+            </div>
+            <div>
+                <i class="bi bi-cash-stack"></i>
+                <span>$<span id="price"></span></span>
+                <small>Starting Price</small>
+            </div>
+        </div>
+        <div class="description">
+            <h2>About This Destination</h2>
+            <p id="description"></p>
+        </div>
+        <div class="booking">
+            <h2>Ready for your trip?</h2>
+            <p>Explore this destination and enjoy your journey.</p>
+            <button id="bookBtn">
+                <i class="bi bi-calendar-check-fill"></i>
+                Book This Trip
+            </button>
+        </div>
+    </div>
+    <script src="details.js"></script>
+</body>
+</html>
