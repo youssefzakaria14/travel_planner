@@ -172,7 +172,7 @@
 
 .card-body strong {
     display: inline-block;
-    margin-top: 5px;
+    margin-top: 12;
     font-size: 19px;
     color: #0a9c99;
 }
@@ -185,6 +185,9 @@
     border-radius: 7px;
     font-size: 13px;
     cursor: pointer;
+}
+.card-body button i{
+    padding-right: 5px;
 }
 button{
  height: 44px;
