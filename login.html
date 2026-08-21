@@ -9,32 +9,37 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <style>
-      body{
-    transition: all 0.5s linear;
-    animation: appear 1s linear ;
-    overflow: hidden;
-}
-@keyframes appear {
-    0%{
-        transform: translate(-1500px,0);
-        opacity: 0;
-    }
-    25%{
+        body {
+            transition: all 0.5s linear;
+            animation: appear 1s linear;
+            overflow: hidden;
+        }
+
+        @keyframes appear {
+            0% {
+                transform: translate(-1500px, 0);
+                opacity: 0;
+            }
+
+            25% {
                 opacity: .25;
-    }
+            }
 
-    50%{
+            50% {
                 opacity: .5;
-    }
-    75%{
-                opacity: .75;
-                transform: translate(0,0);
+            }
 
-    }
-    100%{
-        opacity: 1;
-    }
-}
+            75% {
+                opacity: .75;
+                transform: translate(0, 0);
+
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
         body::-webkit-scrollbar {
             display: none;
         }
@@ -45,27 +50,29 @@
             height: 90vh;
         }
 
-        a{
+        a {
             text-decoration: none;
         }
-        a:hover{
+
+        a:hover {
             text-decoration: underline;
         }
+
         @media (min-width:768px) {
             #width-change {
                 width: 75%;
             }
         }
-        
     </style>
 </head>
 
 <body class="bg-light" style=" font-family: 'Inter', sans-serif;">
     <div class="">
-        <div style="border-radius: 15px;" class="bg-white  d-flex m-sm-4 h-100 align-items-center m-2 overflow-hidden justify-content-center">
+        <div style="border-radius: 15px;"
+            class="bg-white  d-flex m-sm-4 h-100 align-items-center m-2 overflow-hidden justify-content-center">
             <div class="w-100 left d-sm-block d-none position-relative">
                 <img src="./imgs/ChatGPT Image Aug 15, 2026, 04_49_14 AM.png" alt="" class="w-100 h-100">
-                
+
             </div>
 
             <div class="w-100 bg-white mt-4 m-3">
@@ -87,14 +94,14 @@
                             <div class="mb-2">
                                 <label for="exampleInputPassword1" class="form-label">Password</label>
                                 <div class="position-relative">
-                                    <input type="password" class="form-control" id="exampleInputPassword1" aria-describedby="passwordHelp">
+                                    <input type="password" class="form-control" id="exampleInputPassword1"
+                                        aria-describedby="passwordHelp">
                                     <i class="fa-solid fa-eye position-absolute text-secondary fs-5 fw-semibold top-50 end-0 translate-middle-y me-3"
-                                        id="togglePassword"
-                                        style="cursor: pointer;"></i>
-                                </div>                                
+                                        id="togglePassword" style="cursor: pointer;"></i>
+                                </div>
                             </div>
                             <div class="d-flex justify-content-between mt-3">
-                                <div >
+                                <div>
                                     <input type="checkbox" id="rememberMe">
                                     Remember Me
                                 </div>
@@ -103,7 +110,8 @@
                             <button type="submit" style="background-color: #0ea5a8; letter-spacing: 1px;"
                                 class="btn text-white w-100 mt-3 fs-5">Login</button>
                         </form>
-                        <p class="text-center m-2 text-secondary fs-6">Don't have an account? <a href="index.html"><span style="color: #0ea5a8;" >Create Account</span></a></p>
+                        <p class="text-center m-2 text-secondary fs-6">Don't have an account? <a href="index.html"><span
+                                    style="color: #0ea5a8;">Create Account</span></a></p>
                     </div>
                 </div>
             </div>
@@ -111,6 +119,7 @@
     </div>
 
     <script src="script2.js" type="module"></script>
+    <script src="main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
         crossorigin="anonymous"></script>
