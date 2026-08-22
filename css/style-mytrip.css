@@ -1,0 +1,482 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+:root {
+  --teal: #0d9488;
+  --dark-teal-bg: #004d49;
+  --dark-teal: #00878a;
+  --bg-page: #f4f6f8;
+  --text-dark: #1b2a32;
+  --text-muted: #6b7c85;
+}
+
+body {
+  background-color: var(--bg-page);
+  color: var(--text-dark);
+}
+
+.text-teal {
+  color: var(--teal) !important;
+}
+
+/* 1. Header Navigation (مطابق لـ home.html) */
+.main-navigation-wrap {
+  background-color: var(--dark-teal-bg);
+  padding: 18px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.brand-logo span {
+  color: var(--teal);
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+.nav-menu a:hover {
+  opacity: 0.8;
+}
+
+.nav-menu a.nav-active {
+  border-bottom: 2px solid #ffffff;
+  padding-bottom: 3px;
+  font-weight: 600;
+}
+
+.search-toggle-icon {
+  font-size: 18px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* 2. Banner & Mini Sidebar */
+.trip-banner-container {
+  height: 270px;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)),
+    url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=1200') center/cover;
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+
+.banner-content {
+  position: absolute;
+  bottom: 20px;
+  left: 80px;
+  color: #ffffff;
+}
+
+.banner-content h1 {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 2px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+
+
+/* 3. Itinerary */
+.title-teal {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0f766e;
+}
+
+.itinerary-main-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
+}
+
+.card-day-header {
+  border-bottom: 1px solid #f1f5f9;
+  padding-bottom: 16px;
+  margin-bottom: 20px;
+}
+
+.day-circle {
+  width: 28px;
+  height: 28px;
+  background: var(--teal);
+  color: #ffffff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.day-title {
+  font-size: 17px;
+  font-weight: 700;
+  margin: 0;
+  color: #1e293b;
+}
+
+.day-date-tag {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* Timeline Elements */
+.timeline-tree {
+  position: relative;
+  padding-left: 20px;
+}
+
+.timeline-tree::before {
+  content: '';
+  position: absolute;
+  left: 36px;
+  top: 15px;
+  bottom: 20px;
+  width: 2px;
+  background: #e2e8f0;
+}
+
+.timeline-row {
+  display: flex;
+  gap: 20px;
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.timeline-icon-box {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+.teal-soft {
+  background: #e0f2f1;
+  color: var(--teal);
+}
+
+.teal-filled {
+  background: var(--teal);
+  color: #ffffff;
+}
+
+.timeline-body {
+  flex: 1;
+}
+
+.timeline-body h4 {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0;
+  color: #1e293b;
+}
+
+.event-time {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.event-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin: 4px 0 6px;
+}
+
+.badge-tag {
+  background: #f1f5f9;
+  color: #64748b;
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.meal-preview-box {
+  background: #ffffff;
+  border: 1px solid #eef2f5;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+  max-width: 320px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+}
+
+.meal-preview-box img {
+  width: 60px;
+  height: 50px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.meal-preview-box h5 {
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0 0 2px;
+}
+
+.meal-rating {
+  font-size: 11px;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.meal-rating .material-symbols-outlined {
+  font-size: 14px;
+}
+
+.added-row {
+  background: #f0fdfa;
+  padding: 12px;
+  border-radius: 8px;
+  border-left: 3px solid var(--teal);
+}
+
+.btn-add-activity-dashed {
+  width: 100%;
+  border: 1px dashed var(--teal);
+  background: transparent;
+  color: var(--teal);
+  padding: 12px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* 4. Right Sidebar Cards */
+.side-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+.card-caption {
+  font-size: 11px;
+  font-weight: 700;
+  color: #94a3b8;
+  letter-spacing: 0.5px;
+}
+
+.avatar-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.avatar-letter {
+  width: 32px;
+  height: 32px;
+  background: #f59e0b;
+  color: #ffffff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 12px;
+  margin-left: -8px;
+}
+
+.travelers-count {
+  font-size: 14px;
+  font-weight: 600;
+  margin-left: 8px;
+  color: #1e293b;
+}
+
+/* Map Box */
+.map-route-card {
+  background: var(--dark-teal);
+  color: #ffffff;
+  border-radius: 16px;
+  padding: 35px 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.map-icon {
+  font-size: 34px;
+  margin-bottom: 4px;
+}
+
+.map-route-card h4 {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Budget Card Details */
+.budget-card-title h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+  color: #0f766e;
+}
+
+.total-spent {
+  font-size: 26px;
+  font-weight: 800;
+  color: #1e293b;
+}
+
+.spent-label {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-left: 4px;
+}
+
+.total-max {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+.budget-meter-track {
+  height: 8px;
+  background: #e2e8f0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.budget-meter-fill {
+  background: var(--teal);
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+.budget-breakdown li {
+  font-size: 13px;
+  color: #475569;
+  margin-bottom: 8px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.dot-teal {
+  background: var(--teal);
+}
+
+.dot-yellow {
+  background: #f59e0b;
+}
+
+.dot-red {
+  background: #ef4444;
+}
+
+.btn-log-expense {
+  width: 100%;
+  background: var(--teal);
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+/* Footer */
+.bottom-footer {
+  background: #ffffff;
+  border-top: 1px solid #e7ebed;
+  margin-top: 50px;
+}
+
+.footer-brand {
+  font-size: 20px;
+}
+
+.footer-brand span {
+  color: var(--teal);
+}
+
+.bottom-footer a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.bottom-footer a:hover {
+  color: var(--teal);
+}
+
+.copyright-txt {
+  color: #94a3b8;
+  font-size: 12px;
+}
+/* Delete Button on Timeline Item */
+.btn-delete-item {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.btn-delete-item:hover {
+  background-color: #fee2e2;
+  color: #ef4444;
+}
+
+.btn-delete-item .material-symbols-outlined {
+  font-size: 16px;
+}
